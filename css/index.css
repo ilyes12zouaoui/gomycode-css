@@ -1,6 +1,12 @@
+body {
+  margin: 0px;
+}
 .header {
   background-image: url("../img/banana.jpg");
   height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .header-title {
@@ -10,6 +16,18 @@
   padding-top: 300px;
   padding-left: 50px;
 }
+.box {
+  overflow: hidden;
+  display: inline-block;
+  width: 48%;
+  margin-top: 10px;
+  margin-right: 8px;
+  height: 225px;
+  padding: 12px;
+  box-sizing: border-box;
+  /* transition: outline-offset 0.3s, outline 0.3s; */
+  transition: box-shadow 0.3s;
+}
 
 /* div {
   border: 3px solid rebeccapurple;
@@ -18,18 +36,58 @@
   width: 80%;
   margin: auto;
 }
+.main-title {
+  padding-left: 10px;
+}
 .box-container {
   padding-bottom: 10px;
 }
-.box {
+
+.image-container {
+  position: absolute;
+  transition: all 0.9s;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.box-image-container:hover .image-container {
+  /* height: 0%; */
+  opacity: 0;
+}
+
+.real-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.box-image-container {
+  position: relative;
+}
+
+.special-box {
   overflow: hidden;
   display: inline-block;
-  width: 49%;
-  margin-top: 10px;
+  width: 48%;
+  margin-top: 8px;
+  margin-right: 8px;
   height: 225px;
   transition: all 0.4s;
   padding: 10px;
   box-sizing: border-box;
+}
+
+.box-text {
+  padding: 10px;
+  z-index: 100;
+  overflow: hidden;
+  height: 100%;
+}
+
+.box:hover {
+  /* outline: 4px solid black;
+  outline-offset: -4px; */
+  box-shadow: 2px 14px 17px 2px rgba(75, 85, 74, 0.75);
 }
 
 .bg-gray {
@@ -40,33 +98,6 @@
   background-color: rgb(66, 66, 66);
 }
 
-.image-container {
-  position: absolute;
-  transition: all 0.9s;
-  width: 100%;
-  height: 100%;
-}
-
-.box-image-container:hover .image-container {
-  height: 0%;
-}
-
-.real-image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-}
-.box-image-container {
-  position: relative;
-}
-.box-text {
-  z-index: 100;
-  overflow: hidden;
-  height: 100%;
-}
-
-.box:hover {
-  outline: 4px solid black;
-  outline-offset: -4px;
+.text-white {
+  color: white;
 }
